@@ -28,18 +28,20 @@
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 	
-	<filter>
-		<filter-name>oemInViewFilter</filter-name>
-		<filter-class>
-			org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter
-		</filter-class>
-        <init-param>
-            <param-name>entityManagerFactoryBeanName</param-name>
-            <param-value>emf</param-value>
-        </init-param>		
-	</filter>
-   <filter-mapping>
-        <filter-name>oemInViewFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>	
+	
+<!-- Spring web app tutorial 15: Hibernate Lazy Initialization Exception -->
+<!-- 	<filter> -->
+<!-- 		<filter-name>oemInViewFilter</filter-name> -->
+<!-- 		<filter-class> -->
+<!-- 			org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter -->
+<!-- 		</filter-class> -->
+<!--         <init-param> -->
+<!--             <param-name>entityManagerFactoryBeanName</param-name> -->
+<!--             <param-value>emf</param-value> -->
+<!--         </init-param>		 -->
+<!-- 	</filter> -->
+<!--    <filter-mapping> -->
+<!--         <filter-name>oemInViewFilter</filter-name> -->
+<!--         <url-pattern>/*</url-pattern> -->
+<!--     </filter-mapping>	 -->
 </web-app>

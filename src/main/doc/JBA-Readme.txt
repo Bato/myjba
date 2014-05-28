@@ -295,6 +295,15 @@ You get Lazy Initialization Exception when you access LAZY relationship outside
 transaction in Hibernate (JPA) - also known as Hibernate Lazy Loading.
 
 ###############################################################################
+Spring web app tutorial 16: Hibernate Transaction
+                 http://www.javavids.com/video/spring-web-app-tutorial-16-hibernate-transaction.html
+###############################################################################
+How to use Spring Transactional annotation to load entities in service layer 
+instead of using Open Entity Manager In View Filter.
+
+
+
+###############################################################################
 ###############################################################################
 
 ###############################################################################

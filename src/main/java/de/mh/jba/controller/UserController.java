@@ -15,12 +15,9 @@ public class UserController {
 	
 	private static final Logger log = LoggerFactory.getLogger(UserController.class);
 
-	
 	@Autowired
 	private UserService userService;
 	
-	
-
 	@RequestMapping("/users") 
 	public String users(Model model) {
 		
@@ -29,11 +26,10 @@ public class UserController {
 		model.addAttribute("users", userService.findAll());		
 		return "users";
 	}
-	
-	
+		
 	@RequestMapping("/users/{id}")
 	public String detail(Model model, @PathVariable int id)  {
-		model.addAttribute("user", userService.findOne(id));
+		model.addAttribute("user", userService.findOneWithBlogs(id));
 		return "user-detail";
 	}
 }
