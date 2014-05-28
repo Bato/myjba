@@ -257,7 +257,13 @@ Hibernate: insert into Item (id, blog_id, description, link, published_date, tit
 Hibernate: insert into Item (id, blog_id, description, link, published_date, title) values (default, ?, ?, ?, ?, ?)
 
 ###############################################################################
+Spring web app tutorial 11: MVC (Model View Controller)
+http://www.javavids.com/video/spring-web-app-tutorial-11-mvc-model-view-controller.html
 ###############################################################################
+How to use Spring Web MVC (Model View Controller) with Apache Tiles. 
+How to use  JSTL (Java Standard Tag Library) - c:forEach. 
+Styling table using Twitter Bootstrap.
+
 
 ###############################################################################
 ###############################################################################
