@@ -310,8 +310,11 @@ How to limit the number of Items in ItemRepository
 
 ###############################################################################
 Spring web app tutorial 18: JSP Form binding using Model Attribute
-
+http://www.javavids.com/video/spring-web-app-tutorial-18-jsp-form-binding-using-model-attribute.html
 ###############################################################################
+How to bind JSP form to Java object using ModelAttribute annotation. 
+The form will have responsive layout using Twitter Bootstrap. 
+Receiving HTTP POST in Spring Web MVC.
 
 ###############################################################################
 ###############################################################################

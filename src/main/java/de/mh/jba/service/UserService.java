@@ -19,6 +19,7 @@ import de.mh.jba.repository.ItemRepository;
 import de.mh.jba.repository.UserRepository;
 
 @Service
+@Transactional
 public class UserService {
 
 	private static final Logger log = LoggerFactory.getLogger(UserService.class);
@@ -51,5 +52,10 @@ public class UserService {
 		}
 		user.setBlogs(blogs);
 		return user;
+	}
+
+	public void save(User user) {
+
+		userRepository.save(user);
 	}
 }

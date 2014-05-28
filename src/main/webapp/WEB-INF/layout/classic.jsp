@@ -5,8 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+	<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 	<link rel="stylesheet" 
 		href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" 
@@ -43,7 +42,7 @@
             <ul class="nav navbar-nav">
               <li class="${current == 'index' ? 'active' : ''}"><a href='<spring:url value="/" />'>Home</a></li>
               <li class="${current == 'users' ? 'active' : ''}"><a href='<spring:url value="/users.html"></spring:url>'>Users</a></li>
-              <li><a href="#">Link</a></li>
+              <li class="${current == 'user-register' ? 'active' : ''}"><a href='<spring:url value="/register.html"></spring:url>'>Register</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
