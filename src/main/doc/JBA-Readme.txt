@@ -258,7 +258,7 @@ Hibernate: insert into Item (id, blog_id, description, link, published_date, tit
 
 ###############################################################################
 Spring web app tutorial 11: MVC (Model View Controller)
-http://www.javavids.com/video/spring-web-app-tutorial-11-mvc-model-view-controller.html
+             http://www.javavids.com/video/spring-web-app-tutorial-11-mvc-model-view-controller.html
 ###############################################################################
 How to use Spring Web MVC (Model View Controller) with Apache Tiles. 
 How to use  JSTL (Java Standard Tag Library) - c:forEach. 
@@ -267,6 +267,7 @@ Styling table using Twitter Bootstrap.
 
 ###############################################################################
 Spring web app tutorial 12: Apache Tiles dynamic menu
+            http://www.javavids.com/video/spring-web-app-tutorial-12-apache-tiles-dynamic-menu.html
 ###############################################################################
 How to create a dynamic menu using Apache Tiles and Twitter Bootstrap, 
 how to use tilesx:useAttribute and 
@@ -274,15 +275,24 @@ how to use Expression Language ternary operator.
 
 ###############################################################################
 Spring web app tutorial 13: Path Variable
-   http://www.javavids.com/video/spring-web-app-tutorial-13-path-variable.html
+                         http://www.javavids.com/video/spring-web-app-tutorial-13-path-variable.html
 ###############################################################################
 How to use path variable in Spring Web MVC
 
 ###############################################################################
+Spring web app tutorial 14: JSP Include Directive
+                 http://www.javavids.com/video/spring-web-app-tutorial-14-jsp-include-directive.html
 ###############################################################################
+How to use JSP Include Directive to load JSP taglibs using single line of code.
 
 ###############################################################################
+Spring web app tutorial 15: Hibernate Lazy Initialization Exception
+http://www.javavids.com/video/spring-web-app-tutorial-15-hibernate-lazy-initialization-exception.html
 ###############################################################################
+How to resolve LazyInitializationException using OpenEntityManagerInViewFilter/ 
+OpenSessionInViewFilter?
+You get Lazy Initialization Exception when you access LAZY relationship outside 
+transaction in Hibernate (JPA) - also known as Hibernate Lazy Loading.
 
 ###############################################################################
 ###############################################################################
