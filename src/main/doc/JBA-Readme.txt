@@ -6,7 +6,6 @@ How to create a web application (Java Blogs Aggregator) from scratch.
 From nothing to an application up and running on a custom domain. 
 ###############################################################################|####################
 
-
 Importing a GitHub project into Eclipse
 Importing a Git Project into Eclipse
 
@@ -25,7 +24,7 @@ Local Destination
 	Initial Branch: master
 Configuration
 	remote name: origin
-Ohne username and pwd
+Optional: Enter username and pwd
 
 Elipse Java setting
 	C:\Program Files\Java\jdk1.7.0_25	
@@ -33,22 +32,20 @@ Elipse Maven setting
 	D:\tools\maven\eclipse\conf
 	D:\tools\maven\repository
 	
-	
 mvn -P dev jetty:run -Dspring.profiles.active="dev"
-
 
 ###############################################################################
 Spring web app tutorial 1: Hello World Maven Java EE 6
 ###############################################################################
 
-How to create a Hello World Maven Java EE 6 web application in Eclipse and how to use 
-Jetty plugin (Jetty is a web container like Apache Tomcat).
+How to create a Hello World Maven Java EE 6 web application in Eclipse and 
+how to use Jetty plugin (Jetty is a web container like Apache Tomcat).
  
 Download result: http://www.javavids.com/spring-web-app-tutorial/java-blog-aggregator-step-1.zip
 
 D:\eclipse\eclipse-jee-kepler\eclipse.exe -clean -nosplash -showLocation -data D:\tools\Spring\code\ws_JBA
 
-test
+Test:
 http://localhost:8080/
 Directory: /
 
@@ -301,12 +298,19 @@ Spring web app tutorial 16: Hibernate Transaction
 How to use Spring Transactional annotation to load entities in service layer 
 instead of using Open Entity Manager In View Filter.
 
+###############################################################################
+Spring web app tutorial 17: Spring Data JPA Paging and sorting
+    http://www.javavids.com/video/spring-web-app-tutorial-17-spring-data-jpa-paging-and-sorting.html
+###############################################################################
+How to use Spring Data JPA for paging, sorting and top-n processing? 
+This will generate SQL "SELECT ... ORDER BY ... LIMIT ...".
+
+How to limit the number of Items in ItemRepository 
 
 
 ###############################################################################
-###############################################################################
+Spring web app tutorial 18: JSP Form binding using Model Attribute
 
-###############################################################################
 ###############################################################################
 
 ###############################################################################

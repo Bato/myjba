@@ -7,6 +7,8 @@ import javax.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import de.mh.jba.entity.Blog;
@@ -43,7 +45,8 @@ public class UserService {
 		User user = findOne(id);
 		List<Blog> blogs = blogRepository.findByUser(user);
 		for (Blog blog : blogs) {
-			List<Item> items = itemRepository.findByBlog(blog);
+			List<Item> items = itemRepository.findByBlog(blog, 
+					new PageRequest(0, 10, Direction.DESC, "publishedDate"));
 			blog.setItems(items);
 		}
 		user.setBlogs(blogs);
