@@ -327,11 +327,32 @@ http://docs.spring.io/spring-security/site/docs/3.2.4.RELEASE/reference/htmlsing
 
 
 ###############################################################################
+Spring web app tutorial 20: Spring Security login page
+            http://www.javavids.com/video/spring-web-app-tutorial-20-spring-security-login-page.html
 ###############################################################################
+How to change default login page in Spring security. 
+Creating JSP file with Twitter Bootstrap.
 
-###############################################################################
-###############################################################################
+http://getbootstrap.com/getting-started/
+Sign-in page
+Custom form layout and design for a simple sign in form.
 
+	1. create LoginContoller.java
+	2. general.xml
+	3. edit template: classic.jsp
+	4. login.jsp
+	5. security.xml
+	
+###############################################################################
+Spring web app tutorial 21: Spring Security Logout
+                http://www.javavids.com/video/spring-web-app-tutorial-21-spring-security-logout.html
+###############################################################################
+How to set custom logout URL in a Spring Security application.
+	1. edit template: classic.jsp
+	   <a href='<spring:url value="/logout"></spring:url>'>Logout</a>
+	2. security.xml
+		<logout logout-url="/logout" />
+		
 ###############################################################################
 ###############################################################################
 
