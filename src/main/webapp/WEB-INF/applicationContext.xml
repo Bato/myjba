@@ -45,4 +45,6 @@
 	
 	<jpa:repositories base-package="de.mh.jba.repository"/>
 	
+	<import resource="security.xml"/>
+	
 </beans>
