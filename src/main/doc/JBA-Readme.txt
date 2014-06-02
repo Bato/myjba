@@ -426,7 +426,12 @@ Best practice for form submit.
 		
 		
 ###############################################################################
+Spring web app tutorial 28: User account
+                          http://www.javavids.com/video/spring-web-app-tutorial-28-user-account.html
 ###############################################################################
+How to create a page with user account. 
+How to retrieve currently logged in user name (using Principal object) in Spring Web MVC. 
+Security is done using Spring security.
 
 ###############################################################################
 ###############################################################################
