@@ -375,8 +375,20 @@ isAuthenticated and hasRole expressions.
 	2. edit template: classic.jsp
 
 ###############################################################################
+Spring web app tutorial 24: Spring Security and database
+          http://www.javavids.com/video/spring-web-app-tutorial-24-spring-security-and-database.html
 ###############################################################################
+How to read roles and users using JDBC User Service 
+from relational database - HSQL, PostgreSQL, MySQL, Oracle, ...)? 
+Authorities by username query and users by username query.
 
+	0. Fix the Problem in Role.java
+			@ManyToMany(mappedBy="roles")
+			private List<User> users;
+	1. security.xml
+		<jdbc-user-service data-source-ref="dataSource" ...
+		
+		
 ###############################################################################
 ###############################################################################
 

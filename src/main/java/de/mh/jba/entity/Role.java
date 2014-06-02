@@ -16,7 +16,10 @@ public class Role {
 	
 	private String name;
 	
-	@ManyToMany
+	/**
+	 * mappedBy corresponds to attribute roles in User
+	 */
+	@ManyToMany(mappedBy="roles")
 	private List<User> users;
 
 	public List<User> getUsers() {
