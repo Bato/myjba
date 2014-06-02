@@ -362,8 +362,17 @@ Example of hasRole expression.
 
 	1. security.xml
 		<http use-expressions="true">
+		
+		
 ###############################################################################
+Spring web app tutorial 23: Spring Security and JSP
+               http://www.javavids.com/video/spring-web-app-tutorial-23-spring-security-and-jsp.html
 ###############################################################################
+How to use Spring Security JSP taglib and tag security:authorize with 
+isAuthenticated and hasRole expressions.
+	1. pom.xml
+		add spring-security-taglibs
+	2. edit template: classic.jsp
 
 ###############################################################################
 ###############################################################################
