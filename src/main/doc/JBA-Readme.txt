@@ -409,9 +409,22 @@ Complete registration form.
 Now we will be able to create a user with encrypted password (using bcrypt) 
 and role ROLE_USER, which will be able to login using Spring Security.
 
-###############################################################################
-###############################################################################
 
+###############################################################################
+Spring web app tutorial 27: Spring Web MVC redirect
+               http://www.javavids.com/video/spring-web-app-tutorial-27-spring-web-mvc-redirect.html
+###############################################################################
+How to implement Post/Redirect/Get design pattern using Spring Web MVC. 
+Best practice for form submit.
+
+	1. UserController.java
+		return "redirect:/register.html?success=true";
+	2. user-register.jsp
+		<c:if test="${param.success eq true }" >
+			<div class="alert alert-success">Registration successful !</div>
+		</c:if>		
+		
+		
 ###############################################################################
 ###############################################################################
 
