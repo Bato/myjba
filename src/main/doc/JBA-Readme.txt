@@ -433,11 +433,20 @@ How to create a page with user account.
 How to retrieve currently logged in user name (using Principal object) in Spring Web MVC. 
 Security is done using Spring security.
 
-###############################################################################
-###############################################################################
 
 ###############################################################################
+Spring web app tutorial 29: Twitter Bootstrap modal
+               http://www.javavids.com/video/spring-web-app-tutorial-29-twitter-bootstrap-modal.html
 ###############################################################################
+How to use Twitter Bootstrap modal dialog? Example of a modal dialog with form, 
+which will create a new blog.
+
+http://getbootstrap.com/javascript/#modals
+Launch demo modal
+
+Responsive jQuery UI Dialog 
+Responsive designed that the modal window will auto resize to fit within the container.
+
 
 
 ###############################################################################
