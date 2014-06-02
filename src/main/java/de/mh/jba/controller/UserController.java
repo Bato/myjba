@@ -52,6 +52,7 @@ public class UserController {
 	public String showRegister(){
 		return "user-register";
 	}
+	
 	@RequestMapping(value="/register", method=RequestMethod.POST)
 	public String doRegister(@ModelAttribute("user") User user) {
 		userService.save(user);

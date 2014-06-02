@@ -1,5 +1,6 @@
 package de.mh.jba.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -9,13 +10,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort.Direction;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import de.mh.jba.entity.Blog;
 import de.mh.jba.entity.Item;
+import de.mh.jba.entity.Role;
 import de.mh.jba.entity.User;
 import de.mh.jba.repository.BlogRepository;
 import de.mh.jba.repository.ItemRepository;
+import de.mh.jba.repository.RoleRepository;
 import de.mh.jba.repository.UserRepository;
 
 @Service
@@ -26,6 +30,9 @@ public class UserService {
 	
 	@Autowired
 	private UserRepository userRepository;
+
+	@Autowired
+	private RoleRepository roleRepository;
 
 	@Autowired
 	private BlogRepository blogRepository;
@@ -56,6 +63,13 @@ public class UserService {
 
 	public void save(User user) {
 
+		List<Role> roles = new ArrayList<Role>();
+		roles.add(roleRepository.findByName("ROLE_USER"));
+		user.setRoles(roles);
+		
+		user.setEnabled(true);
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		user.setPassword(encoder.encode(user.getPassword()));
 		userRepository.save(user);
 	}
 }
