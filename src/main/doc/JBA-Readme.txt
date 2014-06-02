@@ -447,8 +447,17 @@ Launch demo modal
 Responsive jQuery UI Dialog 
 Responsive designed that the modal window will auto resize to fit within the container.
 
+###############################################################################
+Spring web app tutorial 30: Twitter Bootstrap tabs
+                http://www.javavids.com/video/spring-web-app-tutorial-30-twitter-bootstrap-tabs.html
+###############################################################################
+Using Twitter Bootstrap tabs with JQuery.
 
-
+http://getbootstrap.com/javascript/#tabs
+Togglable tabs tab.js
+	1. user-detail.jsp
+	
+	
 ###############################################################################
 ###############################################################################
 
