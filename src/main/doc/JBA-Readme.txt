@@ -390,8 +390,17 @@ Authorities by username query and users by username query.
 		
 		
 ###############################################################################
+Spring web app tutorial 25: Spring Security BCrypt
 ###############################################################################
+How to encode password using BCrypt 
+(best practice, contains salt and is best protection against brute-force attacks).
 
+	1. security.xml
+		<password-encoder hash="bcrypt" />
+	2. InitDbService.java
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		userAdmin.setPassword(encoder.encode("admin"));
+		
 ###############################################################################
 ###############################################################################
 
