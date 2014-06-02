@@ -354,8 +354,14 @@ How to set custom logout URL in a Spring Security application.
 		<logout logout-url="/logout" />
 		
 ###############################################################################
+Spring web app tutorial 22: Spring Security Expressions
+           http://www.javavids.com/video/spring-web-app-tutorial-22-spring-security-expressions.html
 ###############################################################################
+How to use Expression-Based Access Control in Spring Security. 
+Example of hasRole expression.
 
+	1. security.xml
+		<http use-expressions="true">
 ###############################################################################
 ###############################################################################
 
