@@ -2,6 +2,7 @@ package de.mh.jba.entity;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -24,7 +25,10 @@ public class Blog {
 	@JoinColumn(name="user_id")
 	private User user;
 
-	@OneToMany(mappedBy="blog")
+    /**
+     * 31: JPA / Hibernate cascade cascade=CascadeType.REMOVE
+     */
+	@OneToMany(mappedBy="blog", cascade=CascadeType.REMOVE)
 	private List<Item> items;
 	
 	public List<Item> getItems() {

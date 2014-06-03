@@ -452,6 +452,7 @@ Spring web app tutorial 30: Twitter Bootstrap tabs
                 http://www.javavids.com/video/spring-web-app-tutorial-30-twitter-bootstrap-tabs.html
 ###############################################################################
 Using Twitter Bootstrap tabs with JQuery.
+http://api.jquery.com/
 
 http://getbootstrap.com/javascript/#tabs
 Togglable tabs tab.js
@@ -459,9 +460,32 @@ Togglable tabs tab.js
 	
 	
 ###############################################################################
+Spring web app tutorial 31: JPA / Hibernate cascade
+                 http://www.javavids.com/video/spring-web-app-tutorial-31-jpa-hibernate-cascade.html
 ###############################################################################
+How to cascade operations in JPA / Hibernate? 
+Presented on cascade type remove. This will solve ConstraintViolationException, 
+which we'll get, when we try to remove some entity without removing all entities, 
+which use it, first
 
 
+solve the problem:
+	org.hibernate.exception.ConstraintViolationException
+	
+Remove the blog
+	1. Blog.java
+		@OneToMany(mappedBy="blog", cascade=CascadeType.REMOVE)
+	2. user-detail.jsp
+			<a href="<spring:url value="/blog/remove/${blog.id}.html" />" class="btn btn-danger triggerRemove">remove blog</a>
+
+remove the user
+	1. Blog.java
+		@OneToMany(mappedBy="user", cascade=CascadeType.REMOVE)
+		private List<Blog> blogs;
+	2. user.jsp
+			
+
+	
 ###############################################################################
 ###############################################################################
 
