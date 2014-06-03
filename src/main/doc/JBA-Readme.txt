@@ -1,4 +1,4 @@
-###############################################################################|####################
+﻿###############################################################################|####################
  Spring web application tutorial (java blogs aggregator)
                                                                              http://www.javavids.com
 
@@ -555,8 +555,16 @@ b- activate the annotation	(out of the box they are disabled
 
 		
 ###############################################################################
+Spring web app tutorial 34: utf-8
+                                 http://www.javavids.com/video/spring-web-app-tutorial-34-utf-8.html
 ###############################################################################
+How to force UTF-8 so that forms work on Apache Tomcat. 
+Using CharacterEncodingFilter from Spring framework.
 
+Žaba Čolić 
+Серге́й Алекса́ндрович Есе́нин
+
+http://localhost:8080/my-jba
 	
 ###############################################################################
 ###############################################################################
