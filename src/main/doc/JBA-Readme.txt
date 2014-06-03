@@ -518,7 +518,53 @@ Prevent to remove something by accident
 
 	
 ###############################################################################
+Spring web app tutorial 33: Spring Security PreAuthorize
+          http://www.javavids.com/video/spring-web-app-tutorial-33-spring-security-preauthorize.html
 ###############################################################################
+How to enable and use expressions with annotations in Spring Security. 
+Specifically I will show you how to use PreAuthorize annotation.
+
+Problem: User can delet a blog from another user
+User test can delete blog from user admin 
+http://localhost:8080/blog/remove/1.html	
+
+Two approachs
+a - check blog user name with current user
+
+b- activate the annotation	(out of the box they are disabled
+
+	1. security.xml
+	<global-method-security pre-post-annotations="enabled" />
+	
+	2. Usercontroller.java
+		@RequestMapping("/blog/remove/{id}")
+		public String removeBlog(@PathVariable int id) {
+			Blog blog = blogService.findOne(id);
+			blogService.delete(blog);
+			return "redirect:/account.html";
+		}
+	
+	3. BlogService.java
+		import org.springframework.security.access.method.P;
+		import org.springframework.security.access.prepost.PreAuthorize
+		@Service
+		public class BlogService {
+			@PreAuthorize("#blog.user.name == authentication.name or hasRole('ROLE_ADMIN')")
+			public void delete(@P("blog") Blog blog) {
+		
+
+		
+###############################################################################
+###############################################################################
+
+	
+###############################################################################
+###############################################################################
+
+	
+###############################################################################
+###############################################################################
+
 
 ###############################################################################
 Spring web app tutorial 51: Spring Profiles and PostgreSQL DB
