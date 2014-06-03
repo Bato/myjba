@@ -6,6 +6,11 @@ How to create a web application (Java Blogs Aggregator) from scratch.
 From nothing to an application up and running on a custom domain. 
 ###############################################################################|####################
 
+http://api.jquery.com/
+http://getbootstrap.com/
+http://getbootstrap.com/getting-started/
+http://getbootstrap.com/javascript/#modals
+
 Importing a GitHub project into Eclipse
 Importing a Git Project into Eclipse
 
@@ -487,9 +492,31 @@ remove the user
 
 	
 ###############################################################################
+Spring web app tutorial 32: Twitter Bootstrap dynamic modal
+       http://www.javavids.com/video/spring-web-app-tutorial-32-twitter-bootstrap-dynamic-modal.html
 ###############################################################################
+How to create a dynamic modal dialog using Twitter Bootstrap, 
+which will be used in a list. 
 
+http://getbootstrap.com/javascript/#modals
+	<div class="modal fade" 
+		id="modalRemove" tabindex="-1" role="dialog" 
+		aria-labelledby="myModalLabel" 
+		aria-hidden="true">
+I will use JQuery to dynamically set link value inside modal window.
+	$(document).ready(function() {
+		$(".triggerRemove").click(function(e) {
+			e.preventDefault();
+			$("#modalRemove .removeBtn").attr("href", $(this).attr("href"));
+			$("#modalRemove").modal();
+		});
+	});
 
+Prevent to remove something by accident
+	1. user-detail.jsp	
+	2. user.jsp
+
+	
 ###############################################################################
 ###############################################################################
 
