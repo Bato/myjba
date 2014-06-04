@@ -656,8 +656,11 @@ How to validate email, URL etc.
 
 			  
 ###############################################################################
+Spring web app tutorial 37: Refactoring
+                           http://www.javavids.com/video/spring-web-app-tutorial-37-refactoring.html
 ###############################################################################
-
+Because our application grows more and more, some refactoring was needed. 
+In this video I split single Spring MVC controller into multiple controllers.
 	
 ###############################################################################
 ###############################################################################

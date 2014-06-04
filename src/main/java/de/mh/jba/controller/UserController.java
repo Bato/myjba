@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import de.mh.jba.entity.Blog;
-import de.mh.jba.entity.User;
 import de.mh.jba.service.BlogService;
 import de.mh.jba.service.UserService;
 
@@ -30,19 +29,7 @@ public class UserController {
 
 	@Autowired
 	private BlogService blogService;
-	
-	/**
-	 * The way how to bind from Spring controller to JSP File
-	 * form:form commandName="user" 
-	 * 
-	 * 
-	 * @return
-	 */
-	@ModelAttribute("user")
-	public User constructUser() {
-		return new User();
-	}
-	
+		
 	/**
 	 * 29: Twitter Bootstrap modal
 	 * form:form commandName="blog" 
@@ -53,43 +40,15 @@ public class UserController {
 	@ModelAttribute("blog")
 	public Blog constructBlog() {
 		return new Blog();
-	}
-	
-	@RequestMapping("/users") 
-	public String users(Model model) {
-		
-		log.info("IN UserController.users" );
-		log.info("userService.findAll()=" + userService.findAll().size());
-		model.addAttribute("users", userService.findAll());		
-		return "users";
-	}
-		
-	@RequestMapping("/users/{id}")
-	public String detail(Model model, @PathVariable int id)  {
-		model.addAttribute("user", userService.findOneWithBlogs(id));
-		return "user-detail";
-	}
-	
-	@RequestMapping("/register")
-	public String showRegister(){
-		return "user-register";
-	}
-	
-	@RequestMapping(value="/register", method=RequestMethod.POST)
-	public String doRegister(@Valid @ModelAttribute("user") User user, BindingResult result) {
-		if (result.hasErrors()) {
-			return "user-register";
-		}
-		userService.save(user);
-		return "redirect:/register.html?success=true";
-	}
-	
+	}	
 	
 	@RequestMapping("/account")
 	public String account(Model model, Principal principal) {
+		log.info("IN UserController.account" );
 		String name = principal.getName();
 		model.addAttribute("user", userService.findOneWithBlogs(name) );
-		return "user-detail";
+		/* return template 'account' from general.xml		 */
+		return "account";
 	}
 
 	/**
@@ -100,7 +59,8 @@ public class UserController {
 	 * @return
 	 */
 	@RequestMapping(value="/account", method=RequestMethod.POST)
-	public String doAddBlog(Model model, @Valid @ModelAttribute("blog") Blog blog,
+	public String doAddBlog(Model model, 
+			@Valid @ModelAttribute("blog") Blog blog,
 			BindingResult result, Principal principal) {
 		
 		if (result.hasErrors()) {
@@ -114,14 +74,10 @@ public class UserController {
 	
 	@RequestMapping("/blog/remove/{id}")
 	public String removeBlog(@PathVariable int id) {
+		log.info("IN UserController.removeBlog id=" + id );
 		Blog blog = blogService.findOne(id);
 		blogService.delete(blog);
 		return "redirect:/account.html";
 	}
 	
-	@RequestMapping("/users/remove/{id}")
-	public String removeUser(@PathVariable int id) {
-		userService.delete(id);
-		return "redirect:/users.html";
-	}
 }

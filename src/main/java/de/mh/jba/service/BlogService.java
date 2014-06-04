@@ -40,6 +40,7 @@ public class BlogService {
 	@PreAuthorize("#blog.user.name == authentication.name or hasRole('ROLE_ADMIN')")
 	public void delete(@P("blog") Blog blog) {
 		
+		blogRepository.delete(blog);
 		
 	}
 
