@@ -605,9 +605,56 @@ OPTION II
 		
 		
 ###############################################################################
+Spring web app tutorial 36: Hibernate Validator
+                   http://www.javavids.com/video/spring-web-app-tutorial-36-hibernate-validator.html
 ###############################################################################
+How to validate input using Hibernate Validator (Bean Validation)? 
+How to validate email, URL etc.
 
+    dispatcher-servlet.xml
+		<mvc:annotation-driven />
+
+	pom.xml
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>5.1.0.Final</version>
+		</dependency>		
+		
+	Blog.java
+	User.java
+			@Size(min = 1, message = "Name must be at least 1 character!")
+			@URL(message = "Invalid URL!")
+			@Email(message = "Invalid email address!")
 	
+	
+	UserController.java
+		@RequestMapping(value="/register", method=RequestMethod.POST)
+		public String doRegister(@Valid @ModelAttribute("user") User user, BindingResult result) {
+			if (result.hasErrors()) {
+				return "user-register";
+			}
+			userService.save(user);
+			return "redirect:/register.html?success=true";
+		}
+		@RequestMapping(value="/account", method=RequestMethod.POST)
+		public String doAddBlog(Model model, @Valid @ModelAttribute("blog") Blog blog,
+				BindingResult result, Principal principal) {			
+			if (result.hasErrors()) {
+			  return account(model, principal);	
+			}			
+			String name = principal.getName();
+			blogService.save(blog, name);
+			return "redirect:/account.html";
+		}			
+
+		user-detail.jsp
+		user-register.jsp
+		      <form:input path="name" class="form-control" />
+		      <form:errors path="name" />		      
+		      <form:errors path="*" />		      
+
+			  
 ###############################################################################
 ###############################################################################
 
