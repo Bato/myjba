@@ -7,10 +7,15 @@ How to create a web application (Java Blogs Aggregator) from scratch.
 From nothing to an application up and running on a custom domain. 
 ###############################################################################|####################
 
-http://api.jquery.com/
-http://getbootstrap.com/
-http://getbootstrap.com/getting-started/
-http://getbootstrap.com/javascript/#modals
+jQuery
+	http://api.jquery.com/
+jQuery Validation Plugin
+	http://jqueryvalidation.org/	
+Bootstrap
+	http://getbootstrap.com/
+	http://getbootstrap.com/getting-started/
+	http://getbootstrap.com/css/
+	http://getbootstrap.com/javascript/#modals
 
 Importing a GitHub project into Eclipse
 Importing a Git Project into Eclipse
@@ -661,6 +666,78 @@ Spring web app tutorial 37: Refactoring
 ###############################################################################
 Because our application grows more and more, some refactoring was needed. 
 In this video I split single Spring MVC controller into multiple controllers.
+	
+###############################################################################
+Spring web app tutorial 38: JQuery Validation Plugin
+        http://www.javavids.com/video/spring-web-app-tutorial-38-jquery-validation-plugin.html
+###############################################################################
+
+How to validate form on the client side using JQuery Validation Plugin (JavaScript). 
+Email validation, URL validation etc. 
+How to implement "retype password" functionality. 
+How to integrate JQuery Validation Plugin with Twitter Bootstrap.
+
+jQuery Validation Plugin
+	http://jqueryvalidation.org/	
+
+in classic.jsp	
+<script type="text/javascript" 
+		src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+	user-regiter.jsp	user-account.jsp
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$(".registrationForm").validate(
+					{
+						rules: {
+							name:{
+								required : true,
+								minlength : 3
+							},
+							email:{
+								required : true,
+								email : true
+							},
+							password:{
+								required : true,
+								minlength : 5
+							},
+							password_again:{
+								required : true,
+								minlength : 5,
+								equalTo : "#password"
+							}					
+						},
+						highlight: function(element) {
+							$(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+						},
+						unhighlight: function(element) {
+							$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+						},
+						messages: {
+							name: {
+								remote: "Such username already exists!"
+							}
+						}
+					}
+			);
+		});
+		</script>;	
+		
+http://getbootstrap.com/css/	
+Validation states
+Bootstrap includes validation styles for error, warning, and success states on form controls. 
+
+###############################################################################
+###############################################################################
+
+###############################################################################
+###############################################################################
+
+	
+###############################################################################
+###############################################################################
+
 	
 ###############################################################################
 ###############################################################################
