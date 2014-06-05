@@ -729,7 +729,20 @@ Validation states
 Bootstrap includes validation styles for error, warning, and success states on form controls. 
 
 ###############################################################################
+Spring web app tutorial 39: Hibernate unique column
+               http://www.javavids.com/video/spring-web-app-tutorial-39-hibernate-unique-column.html
 ###############################################################################
+How to set column unique using Hibernate (JPA). 
+This will cause ConstraintViolationException trying to insert non-unique username.
+
+	User.java
+		@Entity
+		public class User {
+			@Size(min = 3, message = "Name must be at least 3 characters!")
+			@Column(unique = true )
+			private String name;
+	
+	ConstraintViolationException: could not execute statement
 
 ###############################################################################
 ###############################################################################
