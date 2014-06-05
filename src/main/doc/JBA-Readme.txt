@@ -745,9 +745,54 @@ This will cause ConstraintViolationException trying to insert non-unique usernam
 	ConstraintViolationException: could not execute statement
 
 ###############################################################################
+Spring web app tutorial 40: Custom Validation Annotation
+          http://www.javavids.com/video/spring-web-app-tutorial-40-custom-validation-annotation.html
 ###############################################################################
-
+How to create custom validation annotation with Hibernate Validator 
+(Beans Validation) and Framework Spring. 
+How to create a unique username validator.
 	
+Create our own annotation
+Configuring Custom Constraints
+           http://docs.spring.io/spring/docs/current/spring-framework-reference/html/validation.html
+
+	UniqueUsername.java
+		@Target({  FIELD })
+		@Retention(RUNTIME)
+		@Documented
+		@Constraint(validatedBy = {UniqueUsernameValidator.class })
+		public @interface UniqueUsername {
+			
+			String message() ;
+
+			Class<?>[] groups() default { };
+
+			Class<? extends Payload>[] payload() default { };
+		}
+		   
+	UniqueUsernameValidator.java
+		public class UniqueUsernameValidator implements ConstraintValidator<UniqueUsername, String> {
+			@Autowired
+			private UserRepository userRepository;
+			@Override
+			public void initialize(UniqueUsername constraintAnnotation) {
+			}
+			@Override
+			public boolean isValid(String username, ConstraintValidatorContext context) {
+				if (userRepository == null) return true;
+				return userRepository.findByName(username) == null;
+			}
+		}	
+	   
+	User.java
+		@Entity
+		public class User {
+			@Size(min = 3, message = "Name must be at least 3 characters!")
+			@Column(unique = true )
+			@UniqueUsername(message = "Such username already exists!")
+			private String name;	   
+			
+			
 ###############################################################################
 ###############################################################################
 
