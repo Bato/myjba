@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 
 
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 import de.mh.jba.entity.User;
 import de.mh.jba.service.UserService;
 
@@ -54,4 +57,10 @@ public class RegisterController {
 		return "redirect:/register.html?success=true";
 	}
 	
+	@RequestMapping("/available")
+	@ResponseBody  
+	public String available(@RequestParam String username) {
+		Boolean available = userService.findOne(username) == null;
+		return available.toString();
+	}
 }
