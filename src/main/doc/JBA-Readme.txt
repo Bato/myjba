@@ -869,10 +869,15 @@ Test:
 		</script>		
 		
 ###############################################################################
+Spring web app tutorial 42: Generating JAXB classes 
+               http://www.javavids.com/video/spring-web-app-tutorial-42-generating-jaxb-classes.html
 ###############################################################################
 
-
-	
+How to generate JAXB classes in Eclipse. Generating JAXB classes from RSS XSD (XML Schema).
+search for rss xsd
+http://europa.eu/rapid/conf/RSS20.xsd 
+rename to  rss.xsd
+RMB on RSS > generate > JAXB Classes	
 ###############################################################################
 ###############################################################################
 
