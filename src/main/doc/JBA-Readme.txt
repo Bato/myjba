@@ -887,8 +887,10 @@ How to unmarshall XML file using JAXB. Unmarshalling RSS XML file.
 
 	
 ###############################################################################
+Spring web app tutorial 44: JUnit Test Case
+                       http://www.javavids.com/video/spring-web-app-tutorial-44-junit-test-case.html
 ###############################################################################
-
+How to create JUnit Test Case, add JUnit libraries to classpath with Maven and write tests.
 	
 ###############################################################################
 ###############################################################################
@@ -897,5 +899,6 @@ How to unmarshall XML file using JAXB. Unmarshalling RSS XML file.
 ###############################################################################
 Spring web app tutorial 51: Spring Profiles and PostgreSQL DB
 ###############################################################################
-How to use Spring Profiles to distinguish between development and production environment. How to use Heroku PostgreSQL database. This is the last video in "Java blog aggregator" series.
+How to use Spring Profiles to distinguish between development and production environment. 
+How to use Heroku PostgreSQL database. This is the last video in "Java blog aggregator" series.
 
