@@ -878,8 +878,12 @@ search for rss xsd
 http://europa.eu/rapid/conf/RSS20.xsd 
 rename to  rss.xsd
 RMB on RSS > generate > JAXB Classes	
+
 ###############################################################################
+Spring web app tutorial 43: Unmarshalling XML file
+                http://www.javavids.com/video/spring-web-app-tutorial-43-unmarshalling-xml-file.html
 ###############################################################################
+How to unmarshall XML file using JAXB. Unmarshalling RSS XML file.
 
 	
 ###############################################################################
