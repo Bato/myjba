@@ -966,7 +966,15 @@ Add your custom domains here then point your DNS to Heroku.
 
 ###############################################################################
 Spring web app tutorial 51: Spring Profiles and PostgreSQL DB
+         http://www.javavids.com/video/spring-web-app-tutorial-51-spring-profiles-postgresql-db.html
 ###############################################################################
 How to use Spring Profiles to distinguish between development and production environment. 
 How to use Heroku PostgreSQL database. This is the last video in "Java blog aggregator" series.
+
+Run > Run Configuration...
+	my-jba jetty_run
+Main
+	Goals: jetty:run
+JRE
+	-Dspring.profiles.active="dev"
 
