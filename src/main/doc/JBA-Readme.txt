@@ -909,12 +909,37 @@ Spring web app tutorial 46: CLOB
 http://www.tomcatexpert.com/blog/feed
 
 ###############################################################################
+Spring web app tutorial 47: Scheduling
+                            http://www.javavids.com/video/spring-web-app-tutorial-47-scheduling.html
 ###############################################################################
+Scheduling using Spring framework with annotation @Scheduled.
+
+
+###############################################################################
+Spring web app tutorial 48: Java blog aggregator homepage
+         http://www.javavids.com/video/spring-web-app-tutorial-48-java-blog-aggregator-homepage.html
+###############################################################################
+Creating Java blog aggregator homepage with items from database ordered by published 
+date in descending order.
+
+JavaVids
+	http://feeds.feedburner.com/javavids?format=xml
+tomcat
+	http://www.tomcatexpert.com/blog/feed
+eclipse source 
+	http://eclipsesource.com/blogs/author/irbull/feed/
+java world core
+	http://www.javaworld.com/category/core-java/index.rss
+
 
 ###############################################################################
 ###############################################################################
 
+
 ###############################################################################
+###############################################################################
+
+s###############################################################################
 Spring web app tutorial 51: Spring Profiles and PostgreSQL DB
 ###############################################################################
 How to use Spring Profiles to distinguish between development and production environment. 
