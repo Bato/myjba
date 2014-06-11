@@ -940,7 +940,29 @@ How to create WAR file in Eclipse using Maven package.
 RMT Run as > Maven Build ... > Goal = Package
 
 ###############################################################################
+Spring web app tutorial 50: Heroku
+                                http://www.javavids.com/video/spring-web-app-tutorial-50-heroku.html
 ###############################################################################
+How to upload your WAR file to Heroku and have your web. application up and running on your custom domain.
+
+
+Create a new app
+
+Enter your Heroku credentials.
+	mail: me@googlemail.com
+	password (typing will be hidden):
+	Found existing public key: C:/Users/xxx/.ssh/github_rsa.pub
+	Uploading SSH public key C:/Users/xxx/.ssh/github_rsa.pub... done
+
+Google for: heroku deploy:war plugin
+heroku plugins:install https://github.com/heroku/heroku-deploy
+
+cd /D  D:\tools\Spring\code\ws_JBA\my-jba\target
+heroku deploy:war --war my-jba-0.0.1-SNAPSHOT.war --app myjba 
+
+http://myjba.herokuapp.com/
+
+Add your custom domains here then point your DNS to Heroku.
 
 ###############################################################################
 Spring web app tutorial 51: Spring Profiles and PostgreSQL DB
