@@ -933,13 +933,16 @@ java world core
 
 
 ###############################################################################
+Spring web app tutorial 49: maven package
+                         http://www.javavids.com/video/spring-web-app-tutorial-49-maven-package.html
+###############################################################################
+How to create WAR file in Eclipse using Maven package.
+RMT Run as > Maven Build ... > Goal = Package
+
+###############################################################################
 ###############################################################################
 
-
 ###############################################################################
-###############################################################################
-
-s###############################################################################
 Spring web app tutorial 51: Spring Profiles and PostgreSQL DB
 ###############################################################################
 How to use Spring Profiles to distinguish between development and production environment. 
